@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  background: #0f0f1a;
+  color: #e0e0e0;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-bottom: 1px solid #2a2a4a;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #00d4ff;
+  letter-spacing: 2px;
+}
+
+.tagline {
+  color: #888;
+  margin-top: 0.5rem;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.search-container {
+  margin-bottom: 1.5rem;
+}
+
+#search {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  border: 2px solid #2a2a4a;
+  border-radius: 8px;
+  background: #1a1a2e;
+  color: #e0e0e0;
+  transition: border-color 0.3s;
+}
+
+#search:focus {
+  outline: none;
+  border-color: #00d4ff;
+}
+
+#search::placeholder {
+  color: #666;
+}
+
+.filters {
+  margin-bottom: 2rem;
+}
+
+#sort {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #2a2a4a;
+  border-radius: 8px;
+  background: #1a1a2e;
+  color: #e0e0e0;
+  cursor: pointer;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.book-card {
+  background: #1a1a2e;
+  border: 1px solid #2a2a4a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  border-color: #00d4ff;
+}
+
+.book-card h2 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.book-card .author {
+  color: #00d4ff;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.book-card .narrator {
+  color: #888;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-card .meta {
+  color: #666;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.buy-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.buy-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: opacity 0.2s;
+}
+
+.buy-btn:hover {
+  opacity: 0.8;
+}
+
+.buy-btn.audible {
+  background: #f7991c;
+  color: #000;
+}
+
+.buy-btn.google {
+  background: #4285f4;
+  color: #fff;
+}
+
+.buy-btn.libro {
+  background: #e85d4c;
+  color: #fff;
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-size: 0.85rem;
+  border-top: 1px solid #2a2a4a;
+  margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .book-grid {
+    grid-template-columns: 1fr;
+  }
+}

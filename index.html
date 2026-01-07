@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DictaBooks - Compare Sci-Fi Audiobook Prices</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>DictaBooks</h1>
+    <p class="tagline">Compare sci-fi audiobook prices</p>
+  </header>
+
+  <main>
+    <div class="search-container">
+      <input 
+        type="text" 
+        id="search" 
+        placeholder="Search by title, author, or narrator..."
+        autocomplete="off"
+      >
+    </div>
+
+    <div class="filters">
+      <select id="sort">
+        <option value="title">Sort by Title</option>
+        <option value="author">Sort by Author</option>
+        <option value="year">Sort by Year</option>
+        <option value="duration">Sort by Duration</option>
+      </select>
+    </div>
+
+    <div id="results" class="book-grid">
+      <!-- Books populated by JS -->
+    </div>
+  </main>
+
+  <footer>
+    <p>Affiliate disclosure: We earn commissions from qualifying purchases.</p>
+  </footer>
+
+  <script src="books.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
